@@ -1,0 +1,32 @@
+<include file="../Common/header" />
+</head>
+<body class="body">
+	<blockquote class="layui-elem-quote cl">
+	    <a class="layui-btn" href="{:U('ablum/index')}">相册列表</a><a class="layui-btn btn-move layui-btn-normal">移动到</a><a class="layui-btn btn-del layui-btn-danger">删除</a>
+	</blockquote>
+	<div class="photos">
+		<ul>
+			<volist name="list" id="vo">
+				<li data-id="{$vo.id}">
+					<div class="photo-box">
+						<img src="__HOST__/data/imgs/xiaoyu/{$vo['ab_id']}/{$vo['tmp_name']}" alt="{$vo.name}">
+					</div>
+					<div class="photo-name">{$vo['name']?$vo['name']:$vo['tmp_name']}</div>
+				</li>
+			</volist>
+		</ul>
+	</div>
+	<script src="__LIBS__/layui/layui.js"></script>
+	<script src="__JS__/mm/common.js"></script>
+	<script>
+	layui.use(['jquery','form','layer'], function(){
+		var $ = layui.jquery;
+		$('.photos').on('click','li',function(){$(this).toggleClass('cur');});
+		$('.btn-move').on('click',function(){
+			var ids = getIds('.photos .cur','data-id');
+			zayer('移动图片',"{:U('member/ablum/move',['aid'=>$_GET['aid']])}",['30%','40%'],{'#ids':ids});
+		});
+	});
+	</script>
+</body>
+</html>

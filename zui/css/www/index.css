@@ -1,0 +1,155 @@
+.box1{
+	background: url(../../img/index/mbg.jpg) no-repeat center bottom;
+}
+section{
+	overflow: hidden;
+}
+.section-title,.section-business{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	font-family: microsoft yahei,STXihei,"Heiti SC",heiti,serif;
+	font-weight: lighter;
+	display: none;
+}
+.section-title{
+	top: 70%;
+	height: 40px;
+	font-size: 48px;
+	color: #333;
+}
+.container{
+	position: relative;
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+}
+.container img{
+	position: absolute;
+	display: none;
+}
+.msbox{
+	position: absolute;
+	left: 50%;
+	bottom: 30%;
+}
+.business{
+	position: absolute;
+	width: 830px;
+	left: 50%;
+	height: 100%;
+	margin-left: -415px;
+}
+#business{
+	position: absolute;
+	top: 40%;
+}
+.section-business{
+	top: 40%;
+	font-size: 100px;
+	color: #fff;
+	text-shadow: 5px 5px 5px #F99C35;
+}
+.section-btns{
+	width: 430px;
+	overflow: hidden;
+	margin-left: -215px;
+}
+.section-btn-box{
+	width: 900px;
+}
+.web{
+	width: 584px;
+	height: 528px;
+	margin-left: -292px;
+}
+.btn{
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+	font-size: 28px;
+	color: #FFF;
+	margin-right: 20px;
+	letter-spacing: 8px;
+	border: 2px solid #FFF;
+	border-radius:1em;
+	transition-duration: .8s;
+}
+.btn:hover{
+	color: #FF7A01;
+	background: #FFF;
+}
+#pcb{
+	top: 0;
+	left: 0;
+}
+#pcc{
+	top: 29px;
+	left: 28px;
+	animation-duration: .6s;
+}
+.mb{
+	width: 800px;
+	height: 500px;
+	margin-left: -400px;
+}
+#mb1{
+	bottom: 0;
+}
+#mb2{
+	top: 60px;
+	left: 130px;
+}
+#gzh1{
+	bottom: 0;
+	right: 0;
+	animation-duration: .8s;
+}
+#gzh2{
+	left: 0;
+	top: 15%;
+	animation-duration: .6s;
+}
+.wx{
+	width: 800px;
+	height: 588px;
+	margin-left: -400px;
+}
+#wx1, #wx2, #wx3, #wx4, #wx5, #wx6, #wx7, #wx8{
+	position: absolute;
+	animation-duration: .6s;
+}
+#wx1{
+	top: 0;
+	left: 0;
+}
+#wx2{
+	top: 142px;
+	left: 40px;
+}
+#wx3{
+	top: 167px;
+	left: 165px;
+}
+#wx4{
+	top: 212px;
+	left: 126px;
+}
+#wx5{
+	top: 186px;
+	left: 656px;
+}
+#wx6{
+	top: 60px;
+	left: 345px;
+}
+#wx7{
+	top: 261px;
+	left: 265px;
+}
+#wx8{
+	top: 140px;
+	left: 440px;
+}

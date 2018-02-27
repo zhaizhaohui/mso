@@ -1,0 +1,31 @@
+<include file="../Common/header" />
+</head>
+<body class="body">
+<div class="layui-form">
+	<div class="layui-form-item">
+        <label class="layui-form-label">移动到</label>
+        <input type="hidden" name="ids" id="ids">
+        <div class="layui-input-block">
+            <select name="ab_id">
+				<volist name="list" id="vo">
+					<option value="{$vo.ab_id}">{$vo.name}</option>
+				</volist>
+			</select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+    	<div class="layui-input-block">
+        	<button class="layui-btn btn-add" data="55" lay-submit>确定</button>
+        </div>
+    </div>
+</div>
+<script src="__LIBS__/layui/layui.js"></script>
+<script src="__JS__/mm/common.js"></script>
+<script>
+	layui.use(['jquery','form','layer'], function(){
+		var $ =  layui.jquery;
+		
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<include file="../Common/header" />
+</head>
+<body class="body">
+	<blockquote class="layui-elem-quote layui-text">
+	   您现在可以编辑每张图片信息，为每张图片单独添加名称，也可以为所有图片统一命名，单击图片设置封面。您也可以点击<a href="{:U('ablum/index')}">返回相册</a>，使用系统默认命名。
+	</blockquote>
+	<form method="post" action="{:U('upimg/batchName')}">
+	<input type="hidden" name="cover" value="0" id="cover">
+	<input type="hidden" name="ab_id" value="{$ab_id}">
+	<div class="layui-tab">
+		<ul class="layui-tab-title">
+			<li class="layui-this">单独命名</li>
+			<li>统一命名</li>
+		</ul>
+		<div class="layui-tab-content">
+			<div class="layui-tab-item layui-show photos">
+				<ul class="cl">
+					<volist name="list" id="vo">
+						<li>
+							<div class="photo-box">
+								<div class="z-seat"></div>
+								<img src="{$vo.photo}" alt="{$vo.tmp_name}">
+							</div>
+							<div class="photo-name">
+								<input type="text" name="name[]" placeholder="为图片添加名称">
+								<input type="hidden" name="ids[]" value="{$vo.id}">
+							</div>
+						</li>
+					</volist>
+				</ul>
+			</div>
+			<div class="layui-tab-item"><input type="text" class="layui-input" name="uname" placeholder="请在此为图片统一命名"></div>
+		</div>
+	</div>
+	<div class="layui-form-item">
+        <button class="layui-btn" lay-submit=""><i class="layui-icon">&#xe62f;</i>提交</button>
+    </div>
+	</form>
+	<script src="__LIBS__/layui/layui.js"></script>
+	<script>
+		layui.use(['form','jquery','element'], function(){
+			var $ = layui.jquery;
+			$('html').on('click','.photo-box',function(){
+				var seat = $(this).find('.z-seat');
+				if(seat.hasClass('z-cover')){
+					seat.removeClass('z-cover');
+					$('#cover').val('0');
+				}else{
+					seat.addClass('z-cover').parents('li').siblings('li').find('.z-seat').removeClass('z-cover');
+					$('#cover').val(seat.next('img').attr('alt'));
+				}
+			})
+		});
+	</script>
+</body>
+</html>

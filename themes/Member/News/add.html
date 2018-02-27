@@ -1,0 +1,36 @@
+<include file="../Common/header" />
+</head>
+<body class="body">
+	<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+	    <legend>文章添加</legend>
+	</fieldset>
+	<form class="layui-form" method="post" >
+	    <div class="layui-form-item">
+	        <label class="layui-form-label"><span class="note">*</span>标题</label>
+	        <div class="layui-input-block">
+	            <input type="text" name="title" autocomplete="off" placeholder="填写文章标题" required lay-verify="title" class="layui-input">
+	        </div>
+	    </div>
+	    <div class="layui-form-item">
+	        <label class="layui-form-label">关键字</label>
+	        <div class="layui-input-block">
+	            <input type="text" name="keywords" placeholder="关键词在5个以内，用空格隔开" class="layui-input">
+	        </div>
+	    </div>
+	    <div class="layui-form-item layui-form-text">
+	        <label class="layui-form-label"><span class="note">*</span>内容</label>
+	        <div class="layui-input-block">
+	            <textarea id="content" name="content" placeholder="请在这里输入文章内容" required lay-verify="content"></textarea>
+	        </div>
+	    </div>
+	    <div class="layui-form-item">
+	    	<div class="layui-input-block">
+	        	<button class="layui-btn btn-add" lay-submit lay-filter="formAdd"><i class="layui-icon">&#xe654;</i>添加</button>
+	        	<a href="{:U('news/index')}" class="layui-btn layui-btn-primary"><i class="layui-icon">&#xe65c;</i>返回</a>
+	        </div>
+	    </div>
+	</form>
+	<script src="__LIBS__/layui/layui.js"></script>
+	<script src="__JS__/mm/common.js"></script>
+</body>
+</html>

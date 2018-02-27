@@ -1,0 +1,67 @@
+<include file="../Common/header" />
+<style>#txmap{width: 100%;height: 400px;}</style>
+</head>
+<body class="body">
+	<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+	    <legend>联系方式</legend>
+	</fieldset>
+	<form class="layui-form" method="post">
+	    <div class="layui-form-item">
+	        <label class="layui-form-label">温馨提示</label>
+	        <div class="layui-input-block">
+	            <p class="layui-txt note">请在这里填写企业的相关联系方式，让客户更方便地联系到您！</p>
+	        </div>
+	    </div>
+	    <div class="layui-form-item layui-form-text">
+	        <label class="layui-form-label">联 系 人</label>
+	        <div class="layui-input-block">
+	             <input type="text" name="contacts" lay-verify="contacts" autocomplete="off" placeholder="请填写联系人姓名" class="layui-input" value="{$contacts|default=''}">
+	        </div>
+	    </div>
+	    <div class="layui-form-item layui-form-text">
+	        <label class="layui-form-label">联系电话</label>
+	        <div class="layui-input-block">
+	             <input type="text" name="tel" lay-verify="tel" autocomplete="off" placeholder="请填写公司电话号，格式：0311-88888888" class="layui-input"  value="{$tel|default=''}">
+	        </div>
+	    </div>
+	    <div class="layui-form-item layui-form-text">
+	        <label class="layui-form-label">联系手机</label>
+	        <div class="layui-input-block">
+	             <input type="text" name="phone" lay-verify="phone" autocomplete="off" placeholder="请填写联系人手机号" class="layui-input" value="{$phone|default=''}">
+	        </div>
+	    </div>
+	    <div class="layui-form-item layui-form-text">
+	        <label class="layui-form-label">详细地址</label>
+	        <div class="layui-input-block">
+	           <input type="text" name="address" id="address" lay-verify="address" autocomplete="off" placeholder="请填写公司具体地址以方便定位" class="layui-input" value="{$address|default=''}"><input type="hidden" name="coord" id="coord" value="{$coord|default=''}"></div>
+	    </div>
+	    <div class="layui-form-item layui-form-text">
+	        <label class="layui-form-label">E-mail</label>
+	        <div class="layui-input-block">
+	            <input type="text" name="email" lay-verify="email" autocomplete="off" placeholder="请填写公司联系的电子邮箱" class="layui-input" value="{$email|default=''}">
+	        </div>
+	    </div>
+	    <div class="layui-form-item layui-form-text">
+	        <label class="layui-form-label">传真号码</label>
+	        <div class="layui-input-block">
+	            <input type="text" name="fax" lay-verify="fax" autocomplete="off" placeholder="请填写公司联系的传真" class="layui-input" value="{$fax|default=''}">
+	        </div>
+	    </div>
+	    <div class="layui-form-item layui-form-text">
+	        <label class="layui-form-label">地图标注</label>
+	        <div class="layui-input-block">
+	            <div id="txmap"></div>
+	        </div>
+	    </div>
+	    <div class="layui-form-item">
+	    	<div class="layui-input-block">
+	        	<button class="layui-btn" lay-submit=""><i class="layui-icon">&#xe642;</i>编辑</button>
+	        </div>
+	    </div>
+	</form>
+	<script type="text/javascript" src="__LIBS__/layui/layui.js"></script>
+	<script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp"></script>
+	<script src="__JS__/z/txmap.js"></script>
+	<script>layui.use(['form'], function(){});</script>
+</body>
+</html>

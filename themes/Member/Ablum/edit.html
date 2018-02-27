@@ -1,0 +1,21 @@
+<include file="../Common/header" />
+<style>form{margin-top: 15px;}</style>
+</head>
+<body class="body">
+	<form class="layui-form" method="post" >
+		<div class="layui-form-item">
+	        <label class="layui-form-label">相册名称</label>
+	        <div class="layui-input-block">
+	            <input type="text" name="name" autocomplete="off" placeholder="请填写相册名称" lay-verify="name" class="layui-input" value="{$name}">
+	        </div>
+	    </div>
+	    <div class="layui-form-item">
+	    	<div class="layui-input-block">
+	        	<button class="layui-btn btn-add" lay-submit lay-filter="ajax-add"><i class="layui-icon">&#xe654;</i>保存</button>
+	        </div>
+	    </div>
+	</form>
+	<script src="__LIBS__/layui/layui.js"></script>
+	<script src="__JS__/mm/common.js"></script>
+</body>
+</html>

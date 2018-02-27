@@ -1,0 +1,51 @@
+<include file="../Common/header" />
+<link rel="stylesheet" href="__LIBS__/zu/zu.css">
+</head>
+<body class="body">
+	<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+	  <ul class="layui-tab-title">
+	    <li><a href="{:U('upimg/index')}">普通上传</a></li>
+	    <li class="layui-this">批量上传</li>
+	  </ul>
+  	</div>
+  	<form class="layui-form" method="post" action="{:U('member/upimg/batch')}">
+  		<input type="hidden" name="token" value="{:session('token')}">
+  		<div class="layui-form-item">
+	        <label class="layui-form-label">所属相册</label>
+	        <div class="layui-input-block">
+	            <select name="ab_id" id="ablumId">
+					<volist name="list" id="vo">
+						<option value="{$vo.ab_id}">{$vo.name}</option>
+					</volist>
+				</select>
+	        </div>
+	    </div>
+		<div class="layui-form-item">
+	        <label class="layui-form-label">选择图片</label>
+	        <div class="layui-input-block">
+	            <div class="form-control" id="photos"></div>
+	        </div>
+	    </div>
+	    <div class="layui-form-item">
+	    	<div class="layui-input-block">
+	        	<button class="layui-btn" lay-submit=""><i class="layui-icon">&#xe62f;</i>提交</button>
+	        </div>
+	    </div>
+	</form>
+	<script type="text/javascript" src="__LIBS__/layui/layui.js"></script>
+	<script>
+		layui.use(['jquery','form'], function(){
+			var $= layui.jquery;
+			$("#photos").zyUpload({
+				dragDrop: false,
+				width: '100%',
+				height: 'auto',
+				url: "{:U('upimg/multi')}"
+			});
+		});
+	</script>
+	<script src="__LIBS__/jquery/1.9.1/jquery.min.js"></script>
+	<script src="__LIBS__/zu/file.js"></script>
+	<script src="__LIBS__/zu/zu.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<include file="../Common/header" />
+</head>
+<body class="body">
+	<blockquote class="layui-elem-quote cl">
+	    <a class="layui-btn btn-add ablum-ae" href="{:U('member/ablum/add')}" title="创建相册">创建相册</a>
+	</blockquote>
+	<div class="ablum-list cl">
+		<volist name="list" id="vo">
+			<dl>
+				<dt>
+					<a class="ablum-img" title="进入相册" href="{:U('member/ablum/manage',['aid'=>$vo['ab_id']])}">
+						<img src="{$vo['cover']}" alt="">
+					</a>
+					<p>
+						<a class="ablum-edit ablum-ae" href="{:U('member/ablum/edit',['id'=>$vo['ab_id']])}" title="修改相册"><i class="layui-icon">&#xe642;</i></a><a class="ablum-delete btn-del" data-url="{:U('member/ablum/delete',['id'=>$vo['ab_id']])}" title="删除相册"><i class="layui-icon">&#xe640;</i></a>
+					</p>
+				</dt>
+				<dd>
+					<strong>{$vo.name}({$vo.photos})</strong>
+					<p>{$vo.create_time|date='Y-m-d H:i:s',###}</p>
+				</dd>
+			</dl>
+		</volist>
+	</div>
+	<div class="z-page">{$page}</div>
+	<script src="__LIBS__/layui/layui.js"></script>
+	<script src="__JS__/mm/common.js"></script>
+	<script>
+		layui.use(['jquery','layer'], function(){
+			var $ = layui.jquery;
+			$('html').on('mouseenter','.ablum-list dt',function(){
+	            $(this).find('p').stop().show();
+	        }).on('mouseleave','dt',function(){
+	            $(this).find('p').stop().hide();
+	        });
+			$('html').on('click','.ablum-ae',function(e){
+	            e.preventDefault();zayer($(this).attr('title'),$(this).attr('href'),['400px','200px']);
+	        });
+		});
+	</script>
+</body>
+</html>

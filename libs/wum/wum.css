@@ -1,0 +1,84 @@
+.wum{
+	font-size: 14px;
+}
+.wuList{
+    margin-top: 10px;
+    padding: 10px;
+    min-height: 178px;
+    border-radius: 2px;
+    border: 1px solid #e6e6e6;
+}
+.clear::before,.clear::after{
+    clear: both;
+    content: '';
+    display: block;
+}
+.wumBtn{
+	position: relative;
+	display: inline-block;
+}
+.wumBtn span:hover{
+	transition-duration: 1s;
+	background: #0070B2;
+}
+.wuItem{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: #FFF;
+    padding: 8px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #DDD;
+}
+.wuBox{
+	line-height: 150px;
+	text-align: center;
+    vertical-align: middle;
+}
+.wuBox img{
+    max-width: 100%;
+    max-height: 130px;
+    vertical-align: middle;
+}
+input[type="file"]{
+	position: absolute !important;
+	clip: rect(1px,1px,1px,1px);
+}
+.wuBtns{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 9;
+	height: 30px;
+	display: none;
+	background: rgba(0,0,0,.4);
+}
+.wuBtns a{
+	float: right;
+	display: block;
+	width: 30px;
+	height: 30px;
+	color: #FFF;
+	margin-right: 5px;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+}
+.wuBtns em{
+	position: absolute;
+	top: -20px;
+	right: 8px;
+	z-index: -1;
+	font-style: normal;
+	display: inline-block;
+	padding: 3px 8px;
+	border-radius: 4px;
+	font-size: 12px;
+	color: #FFF;
+	display: none;
+	background: rgba(255,104,57,1);
+}

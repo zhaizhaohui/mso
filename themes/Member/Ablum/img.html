@@ -1,0 +1,82 @@
+<include file="../Common/header" />
+<style>
+	div,ul,li,img {
+		margin: 0;
+		padding: 0;
+	}
+	.ablum-select-box {
+		width: 550px;
+		height: 214px;
+		overflow: hidden;
+		margin-bottom: 15px;
+	}
+	.ablum-select-box ul {
+		width: 560px;
+	}
+	.ablum-select-box li {
+		float: left;
+		width: 100px;
+		height: 100px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+		line-height: 100px;
+		overflow: hidden;
+		border: 1px solid #E2E2E2;
+	}
+	.ablum-select-box li img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	#ablum-select-page {
+		text-align: right;
+	}
+</style>
+</head>
+<body class="body">
+	<div class="layui-form layui-form-pane">
+		<div class="layui-form-item">
+	        <label class="layui-form-label">选择相册</label>
+	        <div class="layui-input-block">
+	            <select name="cid">
+	            	<volist name="list" id="vo">
+						<option value="{$vo.id}">{$vo.name}</option>
+					</volist>
+				</select>
+	        </div>
+	    </div>
+    </div>
+    <div class="ablum-select-box">
+		<ul class="cl">
+			<li><img src="/mso/data/imgs/king/9917070664395/bb.jpg" alt=""></li>
+			<li><img src="/mso/data/imgs/king/9917070664395/b2.jpg" alt=""></li>
+			<li><img src="/mso/data/imgs/king/9917070664395/b3.jpg" alt=""></li>
+			<li><img src="/mso/data/imgs/king/9917070664395/b4.jpg" alt=""></li>
+			<li><img src="/mso/data/imgs/king/9917070664395/bb.jpg" alt=""></li>
+			<li><img src="/mso/data/imgs/king/9917070664395/b2.jpg" alt=""></li>
+			<li><img src="/mso/data/imgs/king/9917070664395/b3.jpg" alt=""></li>
+			<li><img src="/mso/data/imgs/king/9917070664395/b4.jpg" alt=""></li>
+			<li><img src="/mso/data/imgs/king/9917070664395/bb.jpg" alt=""></li>
+			<li><img src="/mso/data/imgs/king/9917070664395/b2.jpg" alt=""></li>
+		</ul>
+	</div>
+	<div id="ablum-select-page"></div>
+    <script src="__LIBS__/layui/layui.js"></script>
+    <script>
+	    layui.use(['jquery','form','laypage'], function(){
+	    	var form = layui.form,
+	    		laypage = layui.laypage,
+	    		$ = layui.jquery;
+	    	laypage.render({
+			    elem: 'ablum-select-page'
+			    ,count: 100
+			    ,first: false
+			    ,last: false
+			});
+	    	form.on('select',function(data){
+	    		alert(data.value);
+	    	});
+	    });
+    </script>
+</body>
+</html>

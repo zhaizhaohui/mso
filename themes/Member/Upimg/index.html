@@ -1,0 +1,60 @@
+<include file="../Common/header" />
+</head>
+<body class="body">
+	<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+	  <ul class="layui-tab-title">
+	    <li class="layui-this">普通上传</li>
+	    <li><a href="{:U('upimg/multi')}">批量上传</a></li>
+	  </ul>
+  	</div>
+	<form class="layui-form" method="post">
+		<input type="hidden" name="isCover" value="0" id="isCover">
+		<div class="layui-form-item">
+	        <label class="layui-form-label">选择图片</label>
+	        <div class="layui-input-block">
+	           <div id="photo"></div>
+	        </div>
+	    </div>
+	    <div class="layui-form-item">
+	        <label class="layui-form-label">设为封面</label>
+	        <div class="layui-input-block">
+	            <input type="checkbox" lay-skin="switch" lay-text="是|否" lay-filter="isCover">
+	        </div>
+	    </div>
+		<div class="layui-form-item">
+	        <label class="layui-form-label">图片名称</label>
+	        <div class="layui-input-block">
+	            <input type="text" name="name" lay-verify="title" autocomplete="off" placeholder="请填写图片名称" class="layui-input">
+	        </div>
+	    </div>
+	    <div class="layui-form-item">
+	        <label class="layui-form-label">所属相册</label>
+	        <div class="layui-input-block">
+	            <select name="ab_id">
+					<volist name="list" id="vo">
+						<option value="{$vo.ab_id}">{$vo.name}</option>
+					</volist>
+				</select>
+	        </div>
+	    </div>
+		<div class="layui-form-item">
+	    	<div class="layui-input-block">
+	        	<button class="layui-btn" lay-submit=""><i class="layui-icon">&#xe62f;</i>上传</button>
+	        </div>
+	    </div>
+	</form>
+	<script type="text/javascript" src="__LIBS__/layui/layui.js"></script>
+	<script>
+		layui.use(['jquery','form'], function(){
+			var $= layui.jquery,form = layui.form;
+			$('#photo').webu({add:"{:U('member/upimg/ajaxUpload')}"});
+			form.on('switch(isCover)', function(data){
+				var top = (data.elem.checked == true) ? 1 : 0;
+				$('#isCover').val(top);
+			});
+		});
+	</script>
+	<script src="__LIBS__/jquery/1.9.1/jquery.min.js"></script>
+	<script src="__LIBS__/wu/wu.js"></script>
+</body>
+</html>
