@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Test</title>
-    <link rel="stylesheet" href="http://localhost/mso/libs/layui/css/layui.css">
-    <link rel="stylesheet" href="http://localhost/mso/zui/css/admin.css">
+    <link rel="stylesheet" href="http://localhost/178/libs/layui/css/layui.css">
+    <link rel="stylesheet" href="http://localhost/178/zui/css/admin.css">
 <style>.layui-table .layui-icon{font-size: 18px;margin-right: 5px;}.layui-table a{display: block;}</style>
 </head>
 <body class="body">
@@ -128,7 +128,7 @@
 			</table>
 		</div>
 	</div>
-	<script src="http://localhost/mso/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="http://localhost/mso/zui/js/z/time.js"></script>
+	<script src="http://localhost/178/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://localhost/178/zui/js/z/time.js"></script>
 </body>
 </html>

@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Test</title>
-    <link rel="stylesheet" href="http://localhost/mso/libs/layui/css/layui.css">
-    <link rel="stylesheet" href="http://localhost/mso/zui/css/admin.css">
+    <link rel="stylesheet" href="http://localhost/178/libs/layui/css/layui.css">
+    <link rel="stylesheet" href="http://localhost/178/zui/css/admin.css">
 </head>
 <body>
 <!-- layout admin -->
@@ -101,7 +101,7 @@
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
-                    <iframe id="iframe" src="/mso/Member/Index/main" frameborder="0"></iframe>
+                    <iframe id="iframe" src="/178/Member/Index/main" frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -122,7 +122,7 @@
         </tr>
     </table>
 </div>
-<script type="text/javascript" src="http://localhost/mso/libs/layui/layui.js"></script>
-<script type="text/javascript" src="http://localhost/mso/zui/js/mm/index.js"></script>
+<script type="text/javascript" src="http://localhost/178/libs/layui/layui.js"></script>
+<script type="text/javascript" src="http://localhost/178/zui/js/mm/index.js"></script>
 </body>
 </html>
